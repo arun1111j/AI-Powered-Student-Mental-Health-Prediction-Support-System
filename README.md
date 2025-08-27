@@ -9,21 +9,21 @@ A full-stack web application that leverages machine learning to proactively iden
 
 ## 🧠 Table of Contents
 ### Overview
-<html>
-  <ul>
-    Key Features
-    System Architecture
-    Tech Stack
-    Project Structure
-    Installation & Setup
-    Usage
-    ML Model Details
-    Ethical Considerations
-    Future Work
-    Contributing
-    License
-  </ul>
-</html>
+
+<ul>
+  Key Features
+  System Architecture
+  Tech Stack
+  Project Structure
+  Installation & Setup
+  Usage
+  ML Model Details
+  Ethical Considerations
+  Future Work
+  Contributing
+  License
+</ul>
+
 
 ### 📖 Overview
 Student mental health is a critical issue in educational institutions. This project aims to create a proactive, data-driven support system that moves beyond traditional reactive methods. By using a multi-modal machine learning approach, the system identifies subtle signs of distress from various data points (academic, behavioral, textual) and facilitates early intervention through personalized resource recommendations and counselor alerts.
