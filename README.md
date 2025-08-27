@@ -3,32 +3,27 @@
 # AI-Powered-Student-Mental-Health-Prediction-Support-System
 A full-stack web application that leverages machine learning to proactively identify students at risk of mental health challenges and connect them with tailored support resources. The system analyzes academic, behavioral, and optional self-reported data to provide early interventions.
 
-<img  alt="no img" src="https://img.shields.io/badge/ML-Transformer_XGBoost-Orange?style=for-the-badge&logo=python&logoColor=white&color=orange" />
+<img  alt="Tech Stack Badge" src="https://img.shields.io/badge/Stack-React%2520%252B%2520Spring%2520Boot%2520%252B%2520Python-blue?style=for-the-badge" />
+<img  alt="Machine Learning Badge" src="https://img.shields.io/badge/ML-Transformer_XGBoost-Orange?style=for-the-badge&logo=python&logoColor=white&color=orange" />
+<img  alt="Project Status Badge" src="https://img.shields.io/badge/Status-Proof%2520of%2520Concept-success?style=for-the-badge" />
 
 ## 🧠 Table of Contents
 ### Overview
-
-Key Features
-
-System Architecture
-
-Tech Stack
-
-Project Structure
-
-Installation & Setup
-
-Usage
-
-ML Model Details
-
-Ethical Considerations
-
-Future Work
-
-Contributing
-
-License
+<html>
+  <ul>
+    Key Features
+    System Architecture
+    Tech Stack
+    Project Structure
+    Installation & Setup
+    Usage
+    ML Model Details
+    Ethical Considerations
+    Future Work
+    Contributing
+    License
+  </ul>
+</html>
 
 ### 📖 Overview
 Student mental health is a critical issue in educational institutions. This project aims to create a proactive, data-driven support system that moves beyond traditional reactive methods. By using a multi-modal machine learning approach, the system identifies subtle signs of distress from various data points (academic, behavioral, textual) and facilitates early intervention through personalized resource recommendations and counselor alerts.
@@ -52,7 +47,7 @@ The system is built on a microservices-inspired architecture for clarity and sep
 ### Diagram
 
 
-<img width="600" height="600" alt="deepseek_mermaid_20250827_4dc514" src="https://github.com/user-attachments/assets/2a86b508-1303-49b2-b066-cb0a51529a94" />
+<img width="800" height="600" alt="architecture-diagram" src="https://github.com/user-attachments/assets/2a86b508-1303-49b2-b066-cb0a51529a94" />
 
 
 
