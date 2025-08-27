@@ -41,6 +41,15 @@ The system follows a microservices architecture with clear separation of concern
 - **Cache:** Redis for session storage and caching of frequently accessed data
 - **Message Queue:** RabbitMQ for asynchronous processing of prediction tasks
 
+### System Architecture Diagram
+
+<img width="2208" height="925" alt="diagram-export-8-27-2025-9_56_38-PM" src="https://github.com/user-attachments/assets/906fb7f3-3913-413f-9981-4ee46663387d" />
+
+### Student Risk Prediction Pipeline Diagram
+
+<img width="3504" height="1795" alt="diagram-export-8-27-2025-10_01_44-PM" src="https://github.com/user-attachments/assets/68fd082a-f742-41b1-a929-b1eef4b750ec" />
+
+
 ### Privacy & Security
 
 All student data is anonymized before processing, and personally identifiable information is stored separately from behavioral data. The system complies with FERPA and other educational privacy regulations.
