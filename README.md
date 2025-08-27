@@ -13,7 +13,7 @@ A full-stack web application that leverages machine learning to proactively iden
 
 This project is an AI-powered system designed to identify students who may be at risk of mental health challenges using machine learning. By analyzing academic performance, behavioral patterns, and optional self-reported data, the system provides early intervention recommendations and connects students with appropriate support resources.
 
-simple README.md with a link to the documentation:
+simple README.md with a link to the documentation: `ai-powered-student-mental-health-pr.vercel.app`
 
 ### Our Mission
 
