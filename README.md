@@ -1,10 +1,12 @@
-[![ReadMe](https://img.shields.io/badge/ReadMe-018EF5?logo=readme&logoColor=fff)](#)
-
 # AI-Powered Student Mental Health Prediction Support System
+
+[![ReadMe](https://img.shields.io/badge/ReadMe-018EF5?logo=readme&logoColor=fff)](#)
 
 A full-stack web application that leverages machine learning to proactively identify students at risk of mental health challenges and connect them with tailored support resources.
 
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"> <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
+<img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white"> 
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
 ![Badges](https://img.shields.io/badge/Transformer-XGBoost-orange) ![Badges](https://img.shields.io/badge/Status-Proof%20of%20Concept-green)
 
 ## Overview
@@ -55,7 +57,7 @@ The project utilizes a modern, robust technology stack chosen for performance, s
 
 ## Project Structure
 
-```
+```text
 mental-health-ai/
 ├── frontend/ # React application
 │ ├── public/ # Static assets
@@ -80,7 +82,6 @@ mental-health-ai/
 └── documentation/ # Project documentation
 ```
 
-
 ## Installation & Setup
 
 To set up the development environment for this project:
@@ -91,7 +92,7 @@ To set up the development environment for this project:
 4. Copy the environment template: `cp .env.example .env`
 5. Update the environment variables with your configuration
 6. Build and start the containers: `docker-compose up --build`
-7. Access the application at http://localhost:3000
+7. Access the application at`http://localhost:3000`
 
 ### Important Note
 
@@ -99,7 +100,7 @@ This application processes sensitive student data. Ensure you have appropriate s
 
 ## Usage
 
-After starting the services, access the application at http://localhost:3000
+After starting the services, access the application at `http://localhost:3000`
 
 Key usage scenarios:
 
@@ -164,7 +165,7 @@ This project is licensed under the Apache License 2.0 - see the LICENSE file for
 
 You are free to use, modify, and distribute this software, with the condition that any use involving real student data must implement appropriate privacy and security measures and comply with all applicable regulations.
 
-### Important Note
+### Important Notice
 
 This software is provided as-is without warranty. Organizations using this system are solely responsible for compliance with local privacy laws and regulations regarding student data.
 
