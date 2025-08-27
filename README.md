@@ -10,411 +10,315 @@ A full-stack web application that leverages machine learning to proactively iden
 ## 🧠 Table of Contents
 ### Overview
 
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Documentation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>GitHub README List Solutions</title>
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            display: flex;
-            min-height: 100vh;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: #333;
             line-height: 1.6;
-        }
-        
-        /* Sidebar Navigation */
-        .sidebar {
-            width: 280px;
-            background: #2c3e50;
-            color: white;
             padding: 20px;
-            position: fixed;
-            height: 100vh;
-            overflow-y: auto;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            min-height: 100vh;
         }
         
-        .sidebar-header {
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            margin-bottom: 20px;
-        }
-        
-        .sidebar-header h2 {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 22px;
-        }
-        
-        .sidebar-header h2 i {
-            color: #3498db;
-        }
-        
-        .nav-links {
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-bottom: 10px;
-        }
-        
-        .nav-links a {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: #bdc3c7;
-            text-decoration: none;
-            padding: 12px 15px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-links a:hover, .nav-links a.active {
-            background: #34495e;
-            color: white;
-        }
-        
-        .nav-links a i {
-            width: 20px;
-            text-align: center;
-        }
-        
-        /* Main Content */
-        .content {
-            flex: 1;
-            margin-left: 280px;
-            padding: 40px;
-        }
-        
-        .section {
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
             background: white;
-            border-radius: 10px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: #24292e;
+            color: white;
             padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        }
-        
-        .section h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #3498db;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .section h2 i {
-            color: #3498db;
-        }
-        
-        .section p {
-            margin-bottom: 15px;
-        }
-        
-        .badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 20px 0;
-        }
-        
-        .badge {
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .badge.blue {
-            background: #3498db;
-            color: white;
-        }
-        
-        .badge.orange {
-            background: #e67e22;
-            color: white;
-        }
-        
-        .badge.green {
-            background: #2ecc71;
-            color: white;
-        }
-        
-        /* Footer */
-        .footer {
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            color: #7f8c8d;
-            font-size: 14px;
-            border-top: 1px solid #eee;
         }
         
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .sidebar {
-                width: 230px;
-            }
-            
-            .content {
-                margin-left: 230px;
-                padding: 30px;
-            }
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        header p {
+            color: #c9d1d9;
+            font-size: 1.1rem;
+        }
+        
+        .github-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .content {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
         }
         
         @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
-            
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-                padding: 15px;
-            }
-            
             .content {
-                margin-left: 0;
-                padding: 20px;
+                grid-template-columns: 1fr;
             }
-            
-            .nav-links {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            
-            .nav-links li {
-                margin-bottom: 0;
-            }
-            
-            .nav-links a {
-                padding: 8px 12px;
-            }
+        }
+        
+        .card {
+            background: #f6f8fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e4e8;
+        }
+        
+        .card h2 {
+            color: #0366d6;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #0366d6;
+        }
+        
+        .problem, .solution {
+            margin-bottom: 20px;
+        }
+        
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Consolas', monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        
+        .code-block code {
+            display: block;
+            white-space: pre-wrap;
+        }
+        
+        .tag {
+            color: #569cd6;
+        }
+        
+        .attribute {
+            color: #9cdcfe;
+        }
+        
+        .value {
+            color: #ce9178;
+        }
+        
+        .comment {
+            color: #6a9955;
+        }
+        
+        .result {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+            margin: 15px 0;
+        }
+        
+        .result ul, .result ol {
+            margin: 10px 0 10px 20px;
+        }
+        
+        .result li {
+            margin-bottom: 5px;
+        }
+        
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .tip {
+            background: #d1ecf1;
+            border-left: 4px solid #0dcaf0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #24292e;
+            color: white;
+        }
+        
+        .try-button {
+            display: inline-block;
+            background: #0366d6;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        
+        .try-button:hover {
+            background: #0356b6;
         }
     </style>
 </head>
 <body>
-    <!-- Sidebar Navigation -->
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <h2><i class="fas fa-book"></i> Project Docs</h2>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#overview" class="active"><i class="fas fa-home"></i> Overview</a></li>
-            <li><a href="#key-features"><i class="fas fa-star"></i> Key Features</a></li>
-            <li><a href="#architecture"><i class="fas fa-sitemap"></i> System Architecture</a></li>
-            <li><a href="#tech-stack"><i class="fas fa-code"></i> Tech Stack</a></li>
-            <li><a href="#project-structure"><i class="fas fa-folder"></i> Project Structure</a></li>
-            <li><a href="#installation"><i class="fas fa-download"></i> Installation & Setup</a></li>
-            <li><a href="#usage"><i class="fas fa-play"></i> Usage</a></li>
-            <li><a href="#ml-model"><i class="fas fa-brain"></i> ML Model Details</a></li>
-            <li><a href="#ethical"><i class="fas fa-balance-scale"></i> Ethical Considerations</a></li>
-            <li><a href="#future"><i class="fas fa-road"></i> Future Work</a></li>
-            <li><a href="#contributing"><i class="fas fa-handshake"></i> Contributing</a></li>
-            <li><a href="#license"><i class="fas fa-file-contract"></i> License</a></li>
-        </ul>
-    </div>
-
-    <!-- Main Content -->
-    <div class="content">
-        <div class="section" id="overview">
-            <h2><i class="fas fa-home"></i> Overview</h2>
-            <p>This project is a comprehensive full-stack application that combines a modern React frontend with a robust Spring Boot backend and powerful Python-based machine learning capabilities. The system leverages Transformer models for natural language processing tasks and XGBoost for predictive analytics.</p>
-            
-            <div class="badges">
-                <span class="badge blue">React + Spring Boot + Python</span>
-                <span class="badge orange">Transformer + XGBoost</span>
-                <span class="badge green">Proof of Concept</span>
+    <div class="container">
+        <header>
+            <div class="github-icon">🐙</div>
+            <h1>HTML Lists in GitHub README</h1>
+            <p>Solving the issue with &lt;ul&gt; and &lt;ol&gt; tags not rendering properly</p>
+        </header>
+        
+        <div class="content">
+            <div class="card">
+                <h2>The Problem</h2>
+                <div class="problem">
+                    <p>When you use HTML list tags in your README.md file:</p>
+                    <div class="code-block">
+                        <code><span class="tag">&lt;ul&gt;</span>
+    <span class="tag">&lt;li&gt;</span>First item<span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span>Second item<span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span>Third item<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span></code>
+                    </div>
+                    <p>GitHub might not render them correctly because:</p>
+                    <ul>
+                        <li>GitHub Flavored Markdown has limitations on HTML support</li>
+                        <li>Some HTML tags are sanitized for security reasons</li>
+                        <li>Improperly formatted HTML might not be rendered</li>
+                    </ul>
+                </div>
+                
+                <div class="note">
+                    <strong>Note:</strong> GitHub does support some HTML tags in Markdown, but it's inconsistent. For reliability, use Markdown syntax instead.
+                </div>
             </div>
             
-            <p>The application is currently in the proof-of-concept stage, demonstrating the viability of the architecture and the potential of the machine learning models to solve complex problems.</p>
-        </div>
+            <div class="card">
+                <h2>The Solution</h2>
+                <div class="solution">
+                    <p>Use Markdown syntax for lists instead of HTML:</p>
+                    <div class="code-block">
+                        <code><span class="comment"># For unordered lists</span>
+- Item one
+- Item two
+- Item three
 
-        <div class="section" id="key-features">
-            <h2><i class="fas fa-star"></i> Key Features</h2>
-            <p>The system offers several powerful features:</p>
-            <ul>
-                <li>Real-time data processing and analysis</li>
-                <li>Interactive visualizations of results</li>
-                <li>RESTful API for integration with other systems</li>
-                <li>User authentication and authorization</li>
-                <li>Model training and inference endpoints</li>
-                <li>Responsive design for desktop and mobile devices</li>
-            </ul>
+<span class="comment"># For ordered lists</span>
+1. First item
+2. Second item
+3. Third item</code>
+                    </div>
+                    
+                    <p>This will render as:</p>
+                    <div class="result">
+                        <p><strong>Unordered list:</strong></p>
+                        <ul>
+                            <li>Item one</li>
+                            <li>Item two</li>
+                            <li>Item three</li>
+                        </ul>
+                        
+                        <p><strong>Ordered list:</strong></p>
+                        <ol>
+                            <li>First item</li>
+                            <li>Second item</li>
+                            <li>Third item</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="tip">
+                    <strong>Pro Tip:</strong> You can create nested lists by indenting items with 2 or 4 spaces.
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Nested Lists Example</h2>
+                <div class="code-block">
+                    <code><span class="comment"># Nested list example</span>
+- Main item 1
+  - Subitem 1.1
+  - Subitem 1.2
+- Main item 2
+  - Subitem 2.1
+  - Subitem 2.2</code>
+                </div>
+                
+                <p>This will render as:</p>
+                <div class="result">
+                    <ul>
+                        <li>Main item 1
+                            <ul>
+                                <li>Subitem 1.1</li>
+                                <li>Subitem 1.2</li>
+                            </ul>
+                        </li>
+                        <li>Main item 2
+                            <ul>
+                                <li>Subitem 2.1</li>
+                                <li>Subitem 2.2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Task Lists Example</h2>
+                <p>GitHub also supports special task lists:</p>
+                <div class="code-block">
+                    <code><span class="comment"># Task list example</span>
+- [x] Completed task
+- [ ] Incomplete task
+- [ ] Another task</code>
+                </div>
+                
+                <p>This will render as:</p>
+                <div class="result">
+                    <ul>
+                        <li><input type="checkbox" checked disabled> Completed task</li>
+                        <li><input type="checkbox" disabled> Incomplete task</li>
+                        <li><input type="checkbox" disabled> Another task</li>
+                    </ul>
+                </div>
+                
+                <div class="tip">
+                    <strong>Pro Tip:</strong> Task lists are great for tracking project progress directly in your README.
+                </div>
+            </div>
         </div>
-
-        <div class="section" id="architecture">
-            <h2><i class="fas fa-sitemap"></i> System Architecture</h2>
-            <p>The system follows a microservices architecture with clear separation of concerns:</p>
-            <ul>
-                <li><strong>Frontend:</strong> React-based SPA with responsive design</li>
-                <li><strong>Backend:</strong> Spring Boot REST API with JWT authentication</li>
-                <li><strong>ML Service:</strong> Python Flask service for model inference</li>
-                <li><strong>Database:</strong> PostgreSQL for structured data storage</li>
-                <li><strong>Cache:</strong> Redis for session storage and caching</li>
-            </ul>
+        
+        <div class="note" style="margin: 30px;">
+            <h3>When you must use HTML in Markdown</h3>
+            <p>If you absolutely need to use HTML lists in your README (for specific styling or attributes), ensure they are properly formatted and closed. Some HTML tags work in GitHub Markdown, but always test to make sure they render correctly.</p>
+            <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax" class="try-button" target="_blank">GitHub Formatting Guide</a>
         </div>
-
-        <div class="section" id="tech-stack">
-            <h2><i class="fas fa-code"></i> Tech Stack</h2>
-            <p>The project utilizes a modern technology stack:</p>
-            <ul>
-                <li><strong>Frontend:</strong> React, Redux, Material-UI, Chart.js</li>
-                <li><strong>Backend:</strong> Spring Boot, Spring Security, JPA, JWT</li>
-                <li><strong>ML Components:</strong> Python, PyTorch, Transformers, XGBoost, Scikit-learn</li>
-                <li><strong>Database:</strong> PostgreSQL, Redis</li>
-                <li><strong>DevOps:</strong> Docker, Kubernetes, GitHub Actions</li>
-            </ul>
-        </div>
-
-        <div class="section" id="project-structure">
-            <h2><i class="fas fa-folder"></i> Project Structure</h2>
-            <p>The codebase is organized as follows:</p>
-            <pre>
-project-root/
-├── frontend/          # React application
-├── backend/           # Spring Boot application
-├── ml-service/        # Python ML service
-├── infrastructure/    # Docker and deployment configs
-└── documentation/     # Project documentation
-            </pre>
-        </div>
-
-        <div class="section" id="installation">
-            <h2><i class="fas fa-download"></i> Installation & Setup</h2>
-            <p>To set up the development environment:</p>
-            <ol>
-                <li>Clone the repository: <code>git clone https://github.com/example/project.git</code></li>
-                <li>Install dependencies for each service</li>
-                <li>Set up the database and environment variables</li>
-                <li>Run the services using Docker Compose: <code>docker-compose up</code></li>
-            </ol>
-        </div>
-
-        <div class="section" id="usage">
-            <h2><i class="fas fa-play"></i> Usage</h2>
-            <p>After starting the services, access the application at http://localhost:3000</p>
-            <p>Key usage scenarios:</p>
-            <ul>
-                <li>Upload data for processing through the web interface</li>
-                <li>Use the API endpoints to integrate with other systems</li>
-                <li>Train new models using the training interface</li>
-                <li>Monitor system performance through the admin dashboard</li>
-            </ul>
-        </div>
-
-        <div class="section" id="ml-model">
-            <h2><i class="fas fa-brain"></i> ML Model Details</h2>
-            <p>The machine learning component utilizes:</p>
-            <ul>
-                <li><strong>Transformer Model:</strong> BERT-based architecture for NLP tasks</li>
-                <li><strong>XGBoost:</strong> Gradient boosting for structured data problems</li>
-                <li><strong>Training Data:</strong> Curated dataset of [describe data source]</li>
-                <li><strong>Performance:</strong> Current accuracy of 92% on validation set</li>
-            </ul>
-        </div>
-
-        <div class="section" id="ethical">
-            <h2><i class="fas fa-balance-scale"></i> Ethical Considerations</h2>
-            <p>We are committed to responsible AI development:</p>
-            <ul>
-                <li>Regular bias testing on models</li>
-                <li>Transparent data collection and usage policies</li>
-                <li>Privacy-by-design in system architecture</li>
-                <li>Explainable AI techniques for model decisions</li>
-            </ul>
-        </div>
-
-        <div class="section" id="future">
-            <h2><i class="fas fa-road"></i> Future Work</h2>
-            <p>Planned enhancements for the project:</p>
-            <ul>
-                <li>Integration with additional data sources</li>
-                <li>Real-time streaming capabilities</li>
-                <li>Advanced model interpretation tools</li>
-                <li>Mobile application development</li>
-                <li>Expanded API functionality</li>
-            </ul>
-        </div>
-
-        <div class="section" id="contributing">
-            <h2><i class="fas fa-handshake"></i> Contributing</h2>
-            <p>We welcome contributions! Please follow these steps:</p>
-            <ol>
-                <li>Fork the repository</li>
-                <li>Create a feature branch: <code>git checkout -b feature/amazing-feature</code></li>
-                <li>Commit your changes: <code>git commit -m 'Add amazing feature'</code></li>
-                <li>Push to the branch: <code>git push origin feature/amazing-feature</code></li>
-                <li>Open a pull request</li>
-            </ol>
-        </div>
-
-        <div class="section" id="license">
-            <h2><i class="fas fa-file-contract"></i> License</h2>
-            <p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
-            <p>You are free to use, modify, and distribute this software, but please provide attribution to the original authors.</p>
-        </div>
-
-        <div class="footer">
-            <p>© 2023 Project Team | Documentation generated on: <span id="current-date"></span></p>
-        </div>
+        
+        <footer>
+            <p>Solved HTML list rendering issues in GitHub README.md files | Format using Markdown instead of HTML</p>
+        </footer>
     </div>
-
-    <script>
-        // Set current date
-        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', {
-            year: 'numeric', month: 'long', day: 'numeric'
-        });
-        
-        // Simple navigation active state
-        const links = document.querySelectorAll('.nav-links a');
-        const sections = document.querySelectorAll('.section');
-        
-        function changeLinkState() {
-            let index = sections.length;
-            
-            while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
-            
-            links.forEach((link) => link.classList.remove('active'));
-            links[index].classList.add('active');
-        }
-        
-        changeLinkState();
-        window.addEventListener('scroll', changeLinkState);
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                window.scrollTo({
-                    top: targetElement.offsetTop - 20,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
