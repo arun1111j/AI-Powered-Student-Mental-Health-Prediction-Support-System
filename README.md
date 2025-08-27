@@ -4,10 +4,10 @@
 
 A full-stack web application that leverages machine learning to proactively identify students at risk of mental health challenges and connect them with tailored support resources.
 
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
-<img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white"> 
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-![Badges](https://img.shields.io/badge/Transformer-XGBoost-orange) ![Badges](https://img.shields.io/badge/Status-Proof%20of%20Concept-green)
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"><img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white"> 
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
+<img src="https://img.shields.io/badge/Transformer-XGBoost-orange">
+<img src="https://img.shields.io/badge/Status-Proof%20of%20Concept-green">
 
 ## Overview
 
