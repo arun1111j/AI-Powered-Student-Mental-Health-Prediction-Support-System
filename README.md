@@ -66,6 +66,7 @@ The project utilizes a modern, robust technology stack chosen for performance, s
 
 ## Project Structure
 
+### Website Structure
 ```text
 mental-health-ai/
 ├── frontend/ # React application
@@ -90,12 +91,47 @@ mental-health-ai/
 ├── infrastructure/ # Docker and deployment configs
 └── documentation/ # Project documentation
 ```
+### Model Structure
+```text
+ml-service/
+├── app/                    # Flask application
+│   ├── __init__.py
+│   ├── routes.py          # API endpoints
+│   └── error_handlers.py
+├── data/
+│   ├── raw/               # Original data sources
+│   │   ├── textual/
+│   │   ├── academic/
+│   │   ├── behavioral/
+│   │   └── surveys/
+│   └── processed/         # Cleaned and preprocessed data
+├── models/                # Serialized trained models (.pkl, .h5)
+├── utils/                 # Helper functions
+│   ├── preprocessors.py
+│   ├── plotters.py
+│   └── constants.py
+├── pipelines/             # Core ML Pipelines
+│   ├── nlp_pipeline.py    # NLP and Sentiment Analysis Transformer Model
+│   ├── anomaly_pipeline.py # Academic Performance Anomaly Detection
+│   ├── trend_pipeline.py  # Psychological Trend Analysis
+│   ├── behavioral_pipeline.py # Behavioral Pattern Analysis
+│   └── fusion_pipeline.py # SINGOLIAR - Feature Vector Fusion & Meta Classifier
+├── inference/             # Prediction scripts
+│   ├── predictor.py
+│   └── model_loader.py
+├── training/              # Model training scripts
+│   ├── train.py           # Script to train all models
+│   └── data_preprocessor.py
+├── requirements.txt
+├── Dockerfile
+└── app.py                 # Main Flask application entry point
+```
 
 ## Installation & Setup
 
 To set up the development environment for this project:
 
-1. Clone the repository: `git clone https://github.com/example/mental-health-ai.git`
+1. Clone the repository: `git clone https://github.com/arun1111j/AI-Powered-Student-Mental-Health-Prediction-Support-System.git`
 2. Install Docker and Docker Compose on your system
 3. Navigate to the project directory: `cd mental-health-ai`
 4. Copy the environment template: `cp .env.example .env`
