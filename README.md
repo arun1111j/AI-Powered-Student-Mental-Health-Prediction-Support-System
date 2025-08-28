@@ -65,68 +65,71 @@ The project utilizes a modern, robust technology stack chosen for performance, s
 - **DevOps:** Docker, Kubernetes, GitHub Actions, Prometheus, Grafana
 
 ## Project Structure
-
-### Website Structure
 ```text
 mental-health-ai/
-├── frontend/ # React application
-│ ├── public/ # Static assets
-│ ├── src/
-│ │ ├── components/ # Reusable UI components
-│ │ ├── pages/ # Page components
-│ │ ├── services/ # API communication
-│ │ └── utils/ # Helper functions
-├── backend/ # Spring Boot application
-│ ├── src/main/java/
-│ │ ├── controller/ # REST controllers
-│ │ ├── service/ # Business logic
-│ │ ├── repository/ # Data access layer
-│ │ ├── model/ # Data models
-│ │ └── config/ # Application configuration
-├── ml-service/ # Python ML service
-│ ├── app/ # Flask application
-│ ├── models/ # Trained model files
-│ ├── training/ # Model training scripts
-│ └── inference/ # Prediction scripts
-├── infrastructure/ # Docker and deployment configs
-└── documentation/ # Project documentation
+├── frontend/                 # React application
+│   ├── public/
+│   │   └── index.html
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── utils/
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── package.json
+│   └── Dockerfile
+├── backend/                  # Spring Boot application
+│   ├── src/main/java/
+│   │   ├── com/mentalhealth/
+│   │   │   ├── controller/
+│   │   │   ├── service/
+│   │   │   ├── repository/
+│   │   │   ├── model/
+│   │   │   ├── config/
+│   │   │   └── MentalHealthApplication.java
+│   │   └── resources/
+│   │       └── application.properties
+│   ├── pom.xml
+│   └── Dockerfile
+├── ml-service/               # Python ML service
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── routes.py
+│   │   └── error_handlers.py
+│   ├── data/
+│   │   ├── raw/
+│   │   └── processed/
+│   ├── models/
+│   ├── utils/
+│   │   ├── preprocessors.py
+│   │   ├── plotters.py
+│   │   └── constants.py
+│   ├── pipelines/
+│   │   ├── nlp_pipeline.py
+│   │   ├── anomaly_pipeline.py
+│   │   ├── trend_pipeline.py
+│   │   ├── behavioral_pipeline.py
+│   │   └── fusion_pipeline.py
+│   ├── inference/
+│   │   ├── predictor.py
+│   │   └── model_loader.py
+│   ├── training/
+│   │   ├── train.py
+│   │   └── data_preprocessor.py
+│   ├── requirements.txt
+│   ├── app.py
+│   └── Dockerfile
+├── infrastructure/
+│   └── docker-compose.yml
+├── documentation/
+│   ├── API.md
+│   └── DEVELOPMENT.md
+├── .env
+├── .env.example
+├── .gitignore
+└── README.md
 ```
-### Model Structure
-```text
-ml-service/
-├── app/                    # Flask application
-│   ├── __init__.py
-│   ├── routes.py          # API endpoints
-│   └── error_handlers.py
-├── data/
-│   ├── raw/               # Original data sources
-│   │   ├── textual/
-│   │   ├── academic/
-│   │   ├── behavioral/
-│   │   └── surveys/
-│   └── processed/         # Cleaned and preprocessed data
-├── models/                # Serialized trained models (.pkl, .h5)
-├── utils/                 # Helper functions
-│   ├── preprocessors.py
-│   ├── plotters.py
-│   └── constants.py
-├── pipelines/             # Core ML Pipelines
-│   ├── nlp_pipeline.py    # NLP and Sentiment Analysis Transformer Model
-│   ├── anomaly_pipeline.py # Academic Performance Anomaly Detection
-│   ├── trend_pipeline.py  # Psychological Trend Analysis
-│   ├── behavioral_pipeline.py # Behavioral Pattern Analysis
-│   └── fusion_pipeline.py # SINGOLIAR - Feature Vector Fusion & Meta Classifier
-├── inference/             # Prediction scripts
-│   ├── predictor.py
-│   └── model_loader.py
-├── training/              # Model training scripts
-│   ├── train.py           # Script to train all models
-│   └── data_preprocessor.py
-├── requirements.txt
-├── Dockerfile
-└── app.py                 # Main Flask application entry point
-```
-
 ## Installation & Setup
 
 To set up the development environment for this project:
